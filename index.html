@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Infostroy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="mainContainer">
+    <header class="header">
+      <div class="upload">
+        <label id="drop_file" for="img_file" class="choose" draggable="true">
+          <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+          <span class="browse_first">Drop or </span>
+          <span class="browse_last">browse...</span>
+        </label>
+        <input id="img_file" name="img_file" type="file" accept="image/*" draggable="true" onchange="loadFile(event)"/>
+      </div>
+      <div class="searchbox">
+        <span class="iconSearch"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <input type="search" id="search" placeholder="Search" />
+      </div>
+      <a href="#">
+        <div class="logIn">
+          <img src="img/user.png" alt="log in">
+            <span>Log in</span>
+        </div>
+      </a>
+    </header>
+    <div class="leftMenu">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/home.png" class="home" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="img/redBut.png" class="redButton" alt="">
+            <div class="num">2</div>
+            <img src="img/bubble.png" class="bubble" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="img/image.png" class="image" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div id="imageArea">
+        <img id="output" src="#" alt="">
+      </div>
+  <div id="prompt-form-container">
+    <form id="prompt-form">
+      <div id="prompt-message"></div>
+      <input id="text-value" name="text" type="text">
+      <input id="submit" type="submit" value="Ок">
+      <input id="cancel" type="button" name="cancel" value="Cancel">
+    </form>
+  </div>
+      <div class="listOfNotes">
+        <ul class="notesFilter">
+          <li>
+            <input type="radio" id="latest" name="radio" />
+              <label for="latest">Latest </label>
+          </li>
+          <li>
+            <input type="radio" id="all" name="radio" />
+              <label for="all">All</label>
+          </li>
+        </ul>
+        <div >
+          <ul id="notes">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
